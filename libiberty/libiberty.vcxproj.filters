@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="alloca.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cp-demangle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cp-demint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xexit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xmalloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\demangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cp-demangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{fdbad619-5ac1-4926-a781-172442eeda67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8d969756-ab68-4414-b7d5-fb2d5fda74a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{2c44b247-d340-46ff-a4a6-5c26a0f467fb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

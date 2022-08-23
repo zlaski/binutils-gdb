@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets">
+    <Import Project="..\akibld-lib.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories);$(_ZVcpkgCurrentInstalledDir)include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4703;4013;4244;4312;4267</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist "$(OutDir)..\include\libiberty" mkdir "$(OutDir)..\include\libiberty"
+xcopy /i /r /y "$(ProjectDir)..\include\demangle.h" "$(OutDir)..\include\libiberty\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories);$(_ZVcpkgCurrentInstalledDir)include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4703;4013;4244;4312;4267</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist "$(OutDir)..\include\libiberty" mkdir "$(OutDir)..\include\libiberty"
+xcopy /i /r /y "$(ProjectDir)..\include\demangle.h" "$(OutDir)..\include\libiberty\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories);$(_ZVcpkgCurrentInstalledDir)include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4703;4013;4244;4312;4267</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist "$(OutDir)..\include\libiberty" mkdir "$(OutDir)..\include\libiberty"
+xcopy /i /r /y "$(ProjectDir)..\include\demangle.h" "$(OutDir)..\include\libiberty\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories);$(_ZVcpkgCurrentInstalledDir)include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4703;4013;4244;4312;4267</DisableSpecificWarnings>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist "$(OutDir)..\include\libiberty" mkdir "$(OutDir)..\include\libiberty"
+xcopy /i /r /y "$(ProjectDir)..\include\demangle.h" "$(OutDir)..\include\libiberty\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="alloca.c" />
+    <ClCompile Include="cp-demangle.c" />
+    <ClCompile Include="cp-demint.c" />
+    <ClCompile Include="xexit.c" />
+    <ClCompile Include="xmalloc.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cp-demangle.h" />
+    <ClInclude Include="..\include\demangle.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6F379BBD-E096-417A-8EF9-684ED1356653}</ProjectGuid>
+    <RootNamespace>libiberty</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
