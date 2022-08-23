@@ -10,7 +10,7 @@
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(OutDir)..\include\libiberty" mkdir "$(OutDir)..\include\libiberty"
-xcopy /i /r /y "$(ProjectDir)..\include\demangle.h" "$(OutDir)..\include\libiberty\"</Command>
+echo #include "$(ProjectDir)..\include\demangle.h" &gt;"$(OutDir)..\include\libiberty\demangle.h"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -20,7 +20,7 @@ xcopy /i /r /y "$(ProjectDir)..\include\demangle.h" "$(OutDir)..\include\libiber
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(OutDir)..\include\libiberty" mkdir "$(OutDir)..\include\libiberty"
-xcopy /i /r /y "$(ProjectDir)..\include\demangle.h" "$(OutDir)..\include\libiberty\"</Command>
+echo #include "$(ProjectDir)..\include\demangle.h" &gt;"$(OutDir)..\include\libiberty\demangle.h"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -30,7 +30,7 @@ xcopy /i /r /y "$(ProjectDir)..\include\demangle.h" "$(OutDir)..\include\libiber
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(OutDir)..\include\libiberty" mkdir "$(OutDir)..\include\libiberty"
-xcopy /i /r /y "$(ProjectDir)..\include\demangle.h" "$(OutDir)..\include\libiberty\"</Command>
+echo #include "$(ProjectDir)..\include\demangle.h" &gt;"$(OutDir)..\include\libiberty\demangle.h"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -40,7 +40,7 @@ xcopy /i /r /y "$(ProjectDir)..\include\demangle.h" "$(OutDir)..\include\libiber
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(OutDir)..\include\libiberty" mkdir "$(OutDir)..\include\libiberty"
-xcopy /i /r /y "$(ProjectDir)..\include\demangle.h" "$(OutDir)..\include\libiberty\"</Command>
+echo #include "$(ProjectDir)..\include\demangle.h" &gt;"$(OutDir)..\include\libiberty\demangle.h"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
