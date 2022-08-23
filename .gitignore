@@ -77,3 +77,4 @@ stamp-*
 .vs/
 Win32/
 x64/
+*.log
