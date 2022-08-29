@@ -1,29 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="alloca.c">
+    <ClCompile Include="libiberty\alloca.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cp-demangle.c">
+    <ClCompile Include="libiberty\cp-demangle.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cp-demint.c">
+    <ClCompile Include="libiberty\cp-demint.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="xexit.c">
+    <ClCompile Include="libiberty\xexit.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="xmalloc.c">
+    <ClCompile Include="libiberty\xmalloc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\demangle.h">
+    <ClInclude Include="include\demangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cp-demangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="cp-demangle.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

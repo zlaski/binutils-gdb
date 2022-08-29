@@ -1,58 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets">
-    <Import Project="..\akibld-lib.props" />
+    <Import Project="akibld-lib.props" />
   </ImportGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories);$(_ZVcpkgCurrentInstalledDir)include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4703;4013;4244;4312;4267</DisableSpecificWarnings>
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(OutDir)..\include\libiberty" mkdir "$(OutDir)..\include\libiberty"
-echo #include "$(ProjectDir)..\include\demangle.h" &gt;"$(OutDir)..\include\libiberty\demangle.h"</Command>
+del /f /q $(OutDir)..\include\libiberty\demangle.h"
+echo #include "$(ProjectDir)include\demangle.h" &gt;"$(OutDir)..\include\libiberty\demangle.h"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories);$(_ZVcpkgCurrentInstalledDir)include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4703;4013;4244;4312;4267</DisableSpecificWarnings>
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(OutDir)..\include\libiberty" mkdir "$(OutDir)..\include\libiberty"
-echo #include "$(ProjectDir)..\include\demangle.h" &gt;"$(OutDir)..\include\libiberty\demangle.h"</Command>
+del /f /q $(OutDir)..\include\libiberty\demangle.h"
+echo #include "$(ProjectDir)include\demangle.h" &gt;"$(OutDir)..\include\libiberty\demangle.h"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories);$(_ZVcpkgCurrentInstalledDir)include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4703;4013;4244;4312;4267</DisableSpecificWarnings>
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(OutDir)..\include\libiberty" mkdir "$(OutDir)..\include\libiberty"
-echo #include "$(ProjectDir)..\include\demangle.h" &gt;"$(OutDir)..\include\libiberty\demangle.h"</Command>
+del /f /q $(OutDir)..\include\libiberty\demangle.h"
+echo #include "$(ProjectDir)include\demangle.h" &gt;"$(OutDir)..\include\libiberty\demangle.h"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories);$(_ZVcpkgCurrentInstalledDir)include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>include</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4703;4013;4244;4312;4267</DisableSpecificWarnings>
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(OutDir)..\include\libiberty" mkdir "$(OutDir)..\include\libiberty"
-echo #include "$(ProjectDir)..\include\demangle.h" &gt;"$(OutDir)..\include\libiberty\demangle.h"</Command>
+del /f /q $(OutDir)..\include\libiberty\demangle.h"
+echo #include "$(ProjectDir)include\demangle.h" &gt;"$(OutDir)..\include\libiberty\demangle.h"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="alloca.c" />
-    <ClCompile Include="cp-demangle.c" />
-    <ClCompile Include="cp-demint.c" />
-    <ClCompile Include="xexit.c" />
-    <ClCompile Include="xmalloc.c" />
+    <ClCompile Include="libiberty\alloca.c" />
+    <ClCompile Include="libiberty\cp-demangle.c" />
+    <ClCompile Include="libiberty\cp-demint.c" />
+    <ClCompile Include="libiberty\xexit.c" />
+    <ClCompile Include="libiberty\xmalloc.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cp-demangle.h" />
-    <ClInclude Include="..\include\demangle.h" />
+    <ClInclude Include="include\demangle.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{6F379BBD-E096-417A-8EF9-684ED1356653}</ProjectGuid>

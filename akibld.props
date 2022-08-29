@@ -61,10 +61,6 @@
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-    </ClCompile>
-    <Link>
-    </Link>
-    <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
@@ -72,6 +68,7 @@
       <AdditionalIncludeDirectories>$(ProjectDir)include\;$(OutDir)..\include\</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Lib>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
@@ -80,10 +77,12 @@
     <Link>
       <AdditionalLibraryDirectories>$(OutDir)..\lib\</AdditionalLibraryDirectories>
       <AdditionalDependencies>win32extras.lib;shlwapi.lib;ntdll.lib;imagehlp.lib</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>if exist "$(ProjectDir)include\" xcopy /s /e /i /r /y "$(ProjectDir)include\" "$(OutDir)..\include\"
-if exist "$(ProjectDir)include\" attrib +R "$(OutDir)..\include\" /s /d</Command>
+      <Command>@echo on
+if exist "$(ProjectDir)include\" xcopy /s /e /i /r /y "$(ProjectDir)include\" "$(OutDir)..\include\"
+if exist "$(ProjectDir)include\" attrib +R "$(OutDir)..\include\*" /s /d</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
 </Project>
