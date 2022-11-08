@@ -6,11 +6,12 @@ set OutDir=%~1
 pushd %~dp0
 
 set QDIR="%OutDir%..\include\libiberty\"
-mkdir %QDIR% 2>nul
+rmdir /s /q %QDIR% 2>nul
+mkdir %QDIR% 
 
 for /F %%H in (libiberty.lst) do (
     echo %%H
-    xcopy /i /r /y /q %%H %QDIR% >nul
+    xcopy /i /r /y /q %%H %QDIR%
 )
 
 pushd %QDIR%
