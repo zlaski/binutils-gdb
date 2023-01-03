@@ -40,10 +40,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="libiberty.bat">
+    <None Include="binutils-gdb.bat">
       <Filter>Build Files</Filter>
     </None>
-    <None Include="libiberty.lst">
+    <None Include="binutils-gdb.lst">
       <Filter>Build Files</Filter>
     </None>
   </ItemGroup>
