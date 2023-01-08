@@ -1,29 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="libiberty\alloca.c">
+    <ClCompile Include="alloca.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="libiberty\cp-demangle.c">
+    <ClCompile Include="cp-demangle.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="libiberty\cp-demint.c">
+    <ClCompile Include="cp-demint.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="libiberty\xexit.c">
+    <ClCompile Include="xexit.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="libiberty\xmalloc.c">
+    <ClCompile Include="xmalloc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="include\demangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="libiberty\cp-demangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -40,11 +32,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="binutils-gdb.bat">
+    <None Include="libiberty.bat">
       <Filter>Build Files</Filter>
     </None>
-    <None Include="binutils-gdb.lst">
+    <None Include="libiberty.lst">
       <Filter>Build Files</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cp-demangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

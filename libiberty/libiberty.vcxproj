@@ -4,39 +4,38 @@
     <Import Project="$(SolutionDir)akibld-lib.props" />
   </ImportGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3DF747E8-AB1B-443A-AB11-072EE2ED8E21}</ProjectGuid>
-    <RootNamespace>binutils-gdb</RootNamespace>
-    <ProjectName>binutils-gdb</ProjectName>
+    <ProjectGuid>{FB7CEF8B-E923-4413-9E65-85759FEB31F8}</ProjectGuid>
+    <RootNamespace>libiberty</RootNamespace>
+    <ProjectName>libiberty</ProjectName>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <PreBuildEvent>
-      <Command>binutils-gdb.bat "$(OutDir)"</Command>
-      <Message>Installing BINUTILS-GDB headers . . .</Message>
+      <Command>libiberty.bat "$(OutDir)"</Command>
+      <Message>Installing LIBIBERTY headers . . .</Message>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="libiberty\alloca.c" />
-    <ClCompile Include="libiberty\cp-demangle.c" />
-    <ClCompile Include="libiberty\cp-demint.c" />
-    <ClCompile Include="libiberty\xexit.c" />
-    <ClCompile Include="libiberty\xmalloc.c" />
+    <ClCompile Include="alloca.c" />
+    <ClCompile Include="cp-demangle.c" />
+    <ClCompile Include="cp-demint.c" />
+    <ClCompile Include="xexit.c" />
+    <ClCompile Include="xmalloc.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\demangle.h" />
-    <ClInclude Include="libiberty\cp-demangle.h" />
+    <ClInclude Include="cp-demangle.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="binutils-gdb.bat" />
-    <None Include="binutils-gdb.lst" />
+    <None Include="libiberty.bat" />
+    <None Include="libiberty.lst" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\svn\akibld\src\akisystems\akibld\akibld-headers.vcxproj">
+    <ProjectReference Include="d:\svn\akibld\src\akisystems\akibld\akibld-headers.vcxproj">
       <Project>{07fa51f2-cd6f-400f-8821-ebfe0040f2d6}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>HAVE_STDLIB_H;HAVE_STRING_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4996;4244;4267;4703;6001;4701;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>

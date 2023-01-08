@@ -7,7 +7,7 @@ setlocal EnableExtensions EnableDelayedExpansion
 
 set OutDir=%~1
 
-pushd %~dp0
+pushd %~dp0..
 
 set QDIR="%OutDir%..\include\libiberty\"
 rmdir /s /q %QDIR% 2>nul
